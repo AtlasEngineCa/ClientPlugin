@@ -63,7 +63,7 @@ public class ClientMod implements ClientModInitializer {
         Keybinds.destroy = KeyBindingHelper.registerKeyBinding(new KeyBinding(
                 "key.atlasengine.destroy", // The translation key of the keybinding's name
                 InputUtil.Type.KEYSYM, // The type of the keybinding, KEYSYM for keyboard, MOUSE for mouse.
-                GLFW.GLFW_KEY_X, // The keycode of the key
+                GLFW.GLFW_KEY_DELETE, // The keycode of the key
                 "category.atlasengine.animation" // The translation key of the keybinding's category.
         ));
 
@@ -77,7 +77,7 @@ public class ClientMod implements ClientModInitializer {
         Keybinds.remove = KeyBindingHelper.registerKeyBinding(new KeyBinding(
                 "key.atlasengine.remove", // The translation key of the keybinding's name
                 InputUtil.Type.KEYSYM, // The type of the keybinding, KEYSYM for keyboard, MOUSE for mouse.
-                173, // The keycode of the key
+                GLFW.GLFW_KEY_MINUS, // The keycode of the key
                 "category.atlasengine.animation" // The translation key of the keybinding's category.
         ));
 
