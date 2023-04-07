@@ -1,0 +1,36 @@
+{
+  "schemaVersion": 1,
+  "id": "modid",
+  "version": "${version}",
+
+  "name": "AtlasEngine Tools",
+  "description": "Plugin for developing AtlasEngine servers",
+  "authors": [
+    "Alexander Parent"
+  ],
+  "contact": {
+    "homepage": "https://atlasengine.ca/",
+    "sources": "https://github.com/AtlasEngineCa"
+  },
+
+  "license": "",
+  "icon": "assets/modid/icon.png",
+
+  "environment": "*",
+  "entrypoints": {
+    "main": ["ca.atlasengine.Mod"],
+    "client": [
+      "ca.atlasengine.ClientMod"
+    ]
+  },
+  "mixins": [
+    "modid.mixins.json"
+  ],
+
+  "depends": {
+    "fabricloader": ">=0.14.6",
+    "fabric": "*",
+    "minecraft": ">=1.18",
+    "java": ">=17"
+  }
+}
