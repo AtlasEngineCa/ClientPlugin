@@ -39,13 +39,19 @@ public class ModelManager {
         ClientPlayNetworking.send(animationIdentifier, buf);
     }
 
+    private static long lastUpdate = 0;
     public static void changeLookDirection(float headYaw, float pitch) {
+        if (System.currentTimeMillis() - lastUpdate < 100) {
+            return;
+        }
+
         PacketByteBuf buf = PacketByteBufs.create();
         buf.writeByte(2);
         buf.writeFloat(headYaw);
         buf.writeFloat(pitch);
 
         ClientPlayNetworking.send(animationIdentifier, buf);
+        lastUpdate = System.currentTimeMillis();
     }
 
     public static void setAnimation(UUID uuid, String animation) {
