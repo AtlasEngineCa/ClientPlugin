@@ -36,63 +36,70 @@ public class ClientMod implements ClientModInitializer {
                 "key.atlasengine.nextframe", // The translation key of the keybinding's name
                 InputUtil.Type.KEYSYM, // The type of the keybinding, KEYSYM for keyboard, MOUSE for mouse.
                 GLFW.GLFW_KEY_RIGHT_BRACKET, // The keycode of the key
-                "category.atlasengine.animation" // The translation key of the keybinding's category.
+                "category.atlasengine.build" // The translation key of the keybinding's category.
         ));
 
         Keybinds.previous = KeyBindingHelper.registerKeyBinding(new KeyBinding(
                 "key.atlasengine.previousframe", // The translation key of the keybinding's name
                 InputUtil.Type.KEYSYM, // The type of the keybinding, KEYSYM for keyboard, MOUSE for mouse.
                 GLFW.GLFW_KEY_LEFT_BRACKET, // The keycode of the key
-                "category.atlasengine.animation" // The translation key of the keybinding's category.
+                "category.atlasengine.build" // The translation key of the keybinding's category.
         ));
 
         Keybinds.createBlocks = KeyBindingHelper.registerKeyBinding(new KeyBinding(
                 "key.atlasengine.createblockregion", // The translation key of the keybinding's name
                 InputUtil.Type.KEYSYM, // The type of the keybinding, KEYSYM for keyboard, MOUSE for mouse.
                 GLFW.GLFW_KEY_P, // The keycode of the key
-                "category.atlasengine.animation" // The translation key of the keybinding's category.
+                "category.atlasengine.build" // The translation key of the keybinding's category.
         ));
 
         Keybinds.createCutscene = KeyBindingHelper.registerKeyBinding(new KeyBinding(
                 "key.atlasengine.createcutscene", // The translation key of the keybinding's name
                 InputUtil.Type.KEYSYM, // The type of the keybinding, KEYSYM for keyboard, MOUSE for mouse.
                 GLFW.GLFW_KEY_U, // The keycode of the key
-                "category.atlasengine.animation" // The translation key of the keybinding's category.
+                "category.atlasengine.build" // The translation key of the keybinding's category.
         ));
 
         Keybinds.destroy = KeyBindingHelper.registerKeyBinding(new KeyBinding(
                 "key.atlasengine.destroy", // The translation key of the keybinding's name
                 InputUtil.Type.KEYSYM, // The type of the keybinding, KEYSYM for keyboard, MOUSE for mouse.
                 GLFW.GLFW_KEY_DELETE, // The keycode of the key
-                "category.atlasengine.animation" // The translation key of the keybinding's category.
+                "category.atlasengine.build" // The translation key of the keybinding's category.
         ));
 
         Keybinds.add = KeyBindingHelper.registerKeyBinding(new KeyBinding(
                 "key.atlasengine.add", // The translation key of the keybinding's name
                 InputUtil.Type.KEYSYM, // The type of the keybinding, KEYSYM for keyboard, MOUSE for mouse.
                 61, // The keycode of the key
-                "category.atlasengine.animation" // The translation key of the keybinding's category.
+                "category.atlasengine.build" // The translation key of the keybinding's category.
         ));
 
         Keybinds.remove = KeyBindingHelper.registerKeyBinding(new KeyBinding(
                 "key.atlasengine.remove", // The translation key of the keybinding's name
                 InputUtil.Type.KEYSYM, // The type of the keybinding, KEYSYM for keyboard, MOUSE for mouse.
                 GLFW.GLFW_KEY_MINUS, // The keycode of the key
-                "category.atlasengine.animation" // The translation key of the keybinding's category.
+                "category.atlasengine.build" // The translation key of the keybinding's category.
         ));
 
         Keybinds.open = KeyBindingHelper.registerKeyBinding(new KeyBinding(
                 "key.atlasengine.open", // The translation key of the keybinding's name
                 InputUtil.Type.KEYSYM, // The type of the keybinding, KEYSYM for keyboard, MOUSE for mouse.
                 GLFW.GLFW_KEY_O, // The keycode of the key
-                "category.atlasengine.animation" // The translation key of the keybinding's category.
+                "category.atlasengine.build" // The translation key of the keybinding's category.
         ));
 
         Keybinds.createRegion = KeyBindingHelper.registerKeyBinding(new KeyBinding(
                 "key.atlasengine.createregion", // The translation key of the keybinding's name
                 InputUtil.Type.KEYSYM, // The type of the keybinding, KEYSYM for keyboard, MOUSE for mouse.
                 GLFW.GLFW_KEY_R, // The keycode of the key
-                "category.atlasengine.region" // The translation key of the keybinding's category.
+                "category.atlasengine.build" // The translation key of the keybinding's category.
+        ));
+
+        Keybinds.toggle = KeyBindingHelper.registerKeyBinding(new KeyBinding(
+                "key.atlasengine.toggle", // The translation key of the keybinding's name
+                InputUtil.Type.KEYSYM, // The type of the keybinding, KEYSYM for keyboard, MOUSE for mouse.
+                GLFW.GLFW_KEY_G, // The keycode of the key
+                "category.atlasengine.build" // The translation key of the keybinding's category.
         ));
     }
 }

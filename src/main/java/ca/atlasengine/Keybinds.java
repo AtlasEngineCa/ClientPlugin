@@ -16,6 +16,7 @@ public class Keybinds {
     public static KeyBinding createRegion;
     public static KeyBinding createBlocks;
     public static KeyBinding createCutscene;
+    public static KeyBinding toggle;
 
     static {
         ClientTickEvents.END_CLIENT_TICK.register(client -> {
@@ -33,6 +34,10 @@ public class Keybinds {
 
             while (add.wasPressed()) {
                 KeybindsManager.sendAdd();
+            }
+
+            while (toggle.wasPressed()) {
+                KeybindsManager.sendToggle();
             }
 
             while (next.wasPressed()) {

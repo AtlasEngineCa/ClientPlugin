@@ -73,4 +73,12 @@ public class KeybindsManager {
 
         ClientPlayNetworking.send(keypressIdentifier, buf);
     }
+
+    public static void sendToggle() {
+        PacketByteBuf buf = PacketByteBufs.create();
+        buf.writeByte(1);
+        buf.writeByte(1);
+
+        ClientPlayNetworking.send(keypressIdentifier, buf);
+    }
 }
