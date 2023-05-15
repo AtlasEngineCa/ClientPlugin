@@ -48,6 +48,7 @@ public class ModelLoader {
                 String name = packetByteBuf.readString();
                 int customModelData = packetByteBuf.readInt();
                 boolean hideOnLoad = packetByteBuf.readBoolean();
+                boolean gravity = packetByteBuf.readBoolean();
 
                 int count = packetByteBuf.readInt();
                 List<String> animations = new ArrayList<>();
@@ -55,7 +56,7 @@ public class ModelLoader {
                     animations.add(packetByteBuf.readString());
                 }
 
-                providedScreen = new GUIScreen(new ModelModifyGUI(animations, uuid, name, customModelData, hideOnLoad));
+                providedScreen = new GUIScreen(new ModelModifyGUI(animations, uuid, name, customModelData, gravity, hideOnLoad));
             }
         }
     }

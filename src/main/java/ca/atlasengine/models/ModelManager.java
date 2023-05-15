@@ -87,4 +87,13 @@ public class ModelManager {
 
         ClientPlayNetworking.send(animationIdentifier, buf);
     }
+
+    public static void setGravity(UUID uuid, Boolean b) {
+        PacketByteBuf buf = PacketByteBufs.create();
+        buf.writeByte(7);
+        buf.writeUuid(uuid);
+        buf.writeBoolean(b);
+
+        ClientPlayNetworking.send(animationIdentifier, buf);
+    }
 }

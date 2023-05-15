@@ -25,7 +25,7 @@ public class ModelModifyGUI extends LightweightGuiDescription {
         }
     }
 
-    public ModelModifyGUI(List<String> animations, UUID uuid, String modelName, int customModelData, boolean hideOnLoad) {
+    public ModelModifyGUI(List<String> animations, UUID uuid, String modelName, int customModelData, boolean hideOnLoad, boolean gravity) {
         WGridPanel root = new WGridPanel();
         setRootPanel(root);
 
@@ -65,6 +65,14 @@ public class ModelModifyGUI extends LightweightGuiDescription {
         hideOnLoadButton.setToggle(hideOnLoad);
         root.add(hideOnLoadButton, 2, 4, 5, 1);
 
+        WToggleButton gravityButton = new WToggleButton(Text.of("Has Gravity"));
+        gravityButton.setOnToggle((b) -> {
+            ModelManager.setGravity(uuid, b);
+        });
+
+        gravityButton.setToggle(gravity);
+        root.add(gravityButton, 2, 5, 5, 1);
+
         var moveButton = new WButton(Text.of("Move Model"));
         moveButton.setOnClick(() -> {
             ModelManager.moveModel(uuid);
@@ -72,14 +80,6 @@ public class ModelModifyGUI extends LightweightGuiDescription {
         });
 
         root.add(moveButton, 1, 2, 5, 1);
-
-        var closeButton = new WButton(Text.of("Delete Model"));
-        closeButton.setOnClick(() -> {
-            ModelManager.deleteModel(uuid);
-            MinecraftClient.getInstance().setScreen(null);
-        });
-
-        root.add(closeButton, 1, root.getHeight() / 16 - 4, 5, 1);
 
         var stopAnimations = new WButton(Text.of("Stop Animation"));
         stopAnimations.setOnClick(() -> {
